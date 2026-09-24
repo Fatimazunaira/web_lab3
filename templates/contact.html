@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Me - Fatima Zunaira Portfolio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #f5ead9;
+    color: #2a231c;
+    line-height: 1.7;
+  }
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 40px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+  }
+  .topbar .brand { font-weight: bold; }
+  .topbar .nav-links a { color: #2a231c; text-decoration: none; margin-left: 24px; border-bottom: 1px solid transparent; }
+  .topbar .nav-links a:hover, .topbar .nav-links a.active { border-bottom: 1px solid #e10600; color: #e10600; }
+
+  .page-title { position: relative; text-align: center; padding: 50px 20px 10px; overflow: hidden; }
+  .page-title h1 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 44px; color: #1c1c1c; font-weight: normal;
+  }
+  .page-title .tagline {
+    font-family: Copperplate, Papyrus, fantasy;
+    color: #e10600; font-size: 16px; margin-top: 10px; letter-spacing: 1px;
+  }
+
+  .contact-wrap { max-width: 560px; margin: 30px auto 50px; padding: 0 20px; }
+  .contact-item {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 16px 0; border-bottom: 1px solid #d9c9ac;
+  }
+
+  .checkered-stripe {
+    height: 24px; width: 100%;
+    background-image: repeating-conic-gradient(#1c1c1c 0% 25%, #f5ead9 0% 50%);
+    background-size: 24px 24px; border-top: 3px solid #e10600; border-bottom: 3px solid #e10600;
+  }
+  footer { text-align: center; padding: 18px; background: #1c1c1c; color: #ccc; font-size: 12px; letter-spacing: 2px; }
+  footer span { color: #e10600; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Fatima Zunaira/ Portfolio</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="skills.html">Skills</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</div>
+
+<div class="page-title">
+  <h1>Contact Me</h1>
+  <div class="tagline">Let's get in touch</div>
+</div>
+
+<div class="contact-wrap">
+  <div class="contact-item">
+    <span class="label">Email</span>
+    <span class="value"><a href="mailto:fzunaira.bese24seecs@seecs.edu.pk">fzunaira.bese24seecs@seecs.edu.pk</a></span>
+  </div>
+  <div class="contact-item">
+    <span class="label">LinkedIn</span>
+    <span class="value"><a href="https://www.linkedin.com/in/fatima-zunaira-8a25a9313/" target="_blank">https://linkedin.com/in/Fatimazunaira</a></span>
+  </div>
+  <div class="contact-item">
+    <span class="label">GitHub</span>
+    <span class="value"><a href="https://github.com/fatimazunaira" target="_blank">https://github.com/fatimazunaira</a></span>
+  </div>
+  <div class="contact-item">
+    <span class="label">Location</span>
+    <span class="value">Islamabad, Pakistan</span>
+  </div>
+</div>
+
+<div class="checkered-stripe"></div>
+<footer>&copy; 2026 Fatima Zunaira <span>|</span> ALL RIGHTS RESERVED</footer>
+
+</body>
+</html>
