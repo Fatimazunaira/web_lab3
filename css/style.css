@@ -1,0 +1,199 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #f5ead9;
+  color: #2a231c;
+  line-height: 1.7;
+}
+
+a { color: inherit; }
+
+/* clearfix, used on any element that only contains floated children */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.checkered-stripe {
+  margin-top: auto; /* pushes stripe + footer to the bottom when content is short */
+}
+/* ===== Top navigation - floated, aligned horizontally ===== */
+.topbar {
+  padding: 20px 40px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.topbar .brand { float: left; font-weight: bold; padding-top: 4px; }
+.topbar .nav-links { float: right; }
+.topbar .nav-links a {
+  float: left;
+  color: #2a231c;
+  text-decoration: none;
+  margin-left: 24px;
+  border-bottom: 1px solid transparent;
+}
+.topbar .nav-links a:hover,
+.topbar .nav-links a.active { border-bottom: 1px solid #e10600; color: #e10600; }
+
+/* ===== Home hero ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 30px 20px 10px;
+  overflow: hidden;
+}
+.hero h1 {
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 56px;
+  color: #1c1c1c;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.hero .tagline {
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 34px;
+  color: #3d5c3a;
+  margin-top: 10px;
+}
+.hero .tagline span { color: #e10600; }
+
+/* photo + about text, side by side via float, cleared below */
+.hero-row {
+  max-width: 700px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  text-align: left;
+}
+.hero-frame {
+  float: left;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid #1c1c1c;
+  overflow: hidden;
+  margin: 0 30px 20px 0;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+}
+.hero-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about {
+  overflow: hidden; /* clears the floated hero-frame without an extra element */
+  padding-top: 10px;
+  font-size: 15px;
+  color: #4a3f33;
+}
+
+.cta-row { clear: both; text-align: center; margin: 30px 0 50px; }
+.cta-row a {
+  display: inline-block;
+  text-decoration: none;
+  color: #1c1c1c;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e10600;
+  margin: 0 18px;
+}
+.cta-row a:hover { color: #e10600; }
+
+/* ===== Page title banner (all inner pages) ===== */
+.page-title { text-align: center; padding: 50px 20px 10px; overflow: hidden; }
+.page-title h1 {
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 44px; color: #1c1c1c; font-weight: normal;
+}
+.page-title .tagline {
+  font-family: Copperplate, Papyrus, fantasy;
+  color: #e10600; font-size: 16px; margin-top: 10px; letter-spacing: 1px;
+}
+
+/* ===== Hobbies ===== */
+.hobby-list { max-width: 640px; margin: 30px auto 50px; padding: 0 20px; }
+.hobby-item { padding: 20px 0; border-bottom: 1px solid #d9c9ac; }
+.hobby-item:first-child { border-top: 1px solid #d9c9ac; }
+.hobby-item h3 {
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 19px; color: #1c1c1c; margin-bottom: 6px;
+}
+.hobby-item p { font-size: 14px; color: #4a3f33; }
+
+/* ===== Skills - floated columns, cleared ===== */
+.skills-wrap { max-width: 780px; margin: 30px auto 50px; padding: 0 20px; }
+.skill-box { float: left; width: 33.33%; padding: 0 15px; margin-bottom: 20px; }
+.skill-box h3 {
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 18px; color: #1c1c1c; margin-bottom: 16px;
+  border-bottom: 2px solid #e10600; padding-bottom: 8px;
+}
+.tag-list .tag {
+  display: inline-block;
+  background: #1c1c1c;
+  color: #f5ead9;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  margin: 0 8px 8px 0;
+  transition: background 0.2s ease;
+}
+.tag:hover { background: red; }
+
+/* ===== Gallery - floated 3-column grid, cleared ===== */
+.gallery { max-width: 1000px; margin: 30px auto 50px; padding: 0 20px; }
+.gallery figure {
+  float: left;
+  width: 30.66%;
+  margin: 1.5%;
+  background: #fff9ef;
+  border: 1px solid #d9c9ac;
+  overflow: hidden;
+}
+.gallery img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.gallery figcaption {
+  padding: 10px; text-align: center; font-size: 13px; color: #1c1c1c;
+  border-top: 2px solid #e10600; letter-spacing: 0.5px;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+@media (max-width: 700px) {
+  .gallery figure { width: 47%; }
+}
+
+/* ===== Contact ===== */
+.contact-wrap { max-width: 560px; margin: 30px auto 50px; padding: 0 20px; }
+.contact-item {
+  padding: 16px 0; border-bottom: 1px solid #d9c9ac;
+}
+.contact-item .label { float: left; }
+.contact-item .value { overflow: hidden; display: block; text-align: right; }
+
+/* ===== Shared bottom stripe + footer ===== */
+.checkered-stripe {
+  clear: both;
+  height: 24px; width: 100%;
+  background-image: repeating-conic-gradient(#1c1c1c 0% 25%, #f5ead9 0% 50%);
+  background-size: 24px 24px; border-top: 3px solid #e10600; border-bottom: 3px solid #e10600;
+}
+footer { text-align: center; padding: 18px; background: #1c1c1c; color: #ccc; font-size: 12px; letter-spacing: 2px; }
+footer span { color: #e10600; }
+
+/* ===== Small screens: floats stack instead of breaking layout ===== */
+@media (max-width: 640px) {
+  .topbar .brand, .topbar .nav-links, .topbar .nav-links a,
+  .hero-frame, .skill-box, .gallery figure, .contact-item .label, .contact-item .value {
+    float: none;
+    width: auto;
+  }
+  .contact-item .value { text-align: left; }
+}
